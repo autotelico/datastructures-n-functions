@@ -3,6 +3,8 @@ function findMostCommonChar(string) {
   for (const char of string) {
     array.push(char);
   }
+
+  let result = array.reduce(total, current)
   return array
 }
 

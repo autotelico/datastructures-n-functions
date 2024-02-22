@@ -1,3 +1,5 @@
+// in progress
+
 function bracesAreBalanced(str) {
   let bracketIsOpen = false;
   let currentlyOpenBracket = '';
@@ -11,7 +13,9 @@ function bracesAreBalanced(str) {
       currentlyOpenBracket = char;      
     }
     if (bracketIsOpen) {
-        if (bracketClosers.includes(char))
+        if (bracketClosers.includes(char)) {
+
+        }
     }
   }
   return !bracketIsOpen;

@@ -46,6 +46,23 @@ class LinkedList {
             counter++;
         }
     }
+    makeListCircular() {
+        let temp = this.head;
+        while (temp.next) {
+            temp = temp.next
+        }
+        temp.next = this.head;
+    }
+    isCircularList() {
+        let temp = this.head;
+        while (temp.next) {
+            if (temp.next === this.head) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
 }
 
 
@@ -54,7 +71,9 @@ myLinkedList.insertFirst(new Node('zeroth'))
 myLinkedList.insertLast(new Node('second'))
 myLinkedList.insertLast(new Node('third'))
 myLinkedList.insertLast(new Node('last!!'))
-console.log(myLinkedList.getFirst());
-console.log(myLinkedList.getLast());
+// console.log(myLinkedList.getFirst());
+// console.log(myLinkedList.getLast());
 myLinkedList.removeKthNode(3)
-console.log(myLinkedList);
+myLinkedList.makeListCircular()
+console.log(myLinkedList.isCircularList());
+// console.log(myLinkedList);
